@@ -22,10 +22,6 @@ class LabelDictionaryCollector extends AbstractStoragePropelCollector
      */
     protected $productLabelFacade;
 
-    /**
-     * @param \Spryker\Service\UtilDataReader\UtilDataReaderServiceInterface $utilDataReaderService
-     * @param \Spryker\Zed\ProductLabelCollector\Dependency\Facade\ProductLabelCollectorToProductLabelInterface $productLabelFacade
-     */
     public function __construct(
         UtilDataReaderServiceInterface $utilDataReaderService,
         ProductLabelCollectorToProductLabelInterface $productLabelFacade

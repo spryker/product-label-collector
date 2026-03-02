@@ -35,9 +35,6 @@ class ProductAbstractRelationCollectorQueryTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testPrepareQueryWillPrepareQueryThatReturnCorrectProductAbstractRelationData(): void
     {
         $this->markTestSkipped('Requires refactoring.');

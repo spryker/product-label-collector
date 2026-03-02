@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\ProductLabelCollector\Business;
+namespace SprykerTest\Zed\ProductLabelCollector\Business;
 
 use Codeception\Test\Unit;
 use DateTime;
@@ -17,6 +17,7 @@ use Spryker\Zed\ProductLabelCollector\Business\ProductLabelCollectorFacadeInterf
  * Auto-generated group annotations
  *
  * @group SprykerTest
+ * @group Zed
  * @group ProductLabelCollector
  * @group Business
  * @group Facade
@@ -35,9 +36,6 @@ class ProductLabelCollectorFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testCollectRelationShouldWhenDeactivatedShouldRemoveInactiveRelations(): void
     {
         if ($this->isDynamicStoreEnabled()) {
@@ -78,17 +76,11 @@ class ProductLabelCollectorFacadeTest extends Unit
         $this->assertCount(0, $data[0][$storageKey]);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabel\Business\ProductLabelFacadeInterface
-     */
     protected function getProductLabelFacade(): ProductLabelFacadeInterface
     {
         return $this->tester->getLocator()->productLabel()->facade();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelCollector\Business\ProductLabelCollectorFacadeInterface
-     */
     protected function getProductLabelCollectorFacade(): ProductLabelCollectorFacadeInterface
     {
         return $this->tester->getLocator()->productLabelCollector()->facade();

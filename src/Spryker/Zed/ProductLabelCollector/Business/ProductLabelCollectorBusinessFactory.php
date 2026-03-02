@@ -98,9 +98,6 @@ class ProductLabelCollectorBusinessFactory extends AbstractBusinessFactory
         return new ProductAbstractRelationCollectorQuery();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelCollector\Business\Collector\ProductLabelCollectorRunnerInterface
-     */
     public function createAbstractProductRelationStorageCollectorRunner(): ProductLabelCollectorRunnerInterface
     {
         return new ProductLabelCollectorRunner(
@@ -109,9 +106,6 @@ class ProductLabelCollectorBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductLabelCollector\Business\Collector\ProductLabelCollectorRunnerInterface
-     */
     public function createLabelDictionaryStorageCollectorRunner(): ProductLabelCollectorRunnerInterface
     {
         return new ProductLabelCollectorRunner(
